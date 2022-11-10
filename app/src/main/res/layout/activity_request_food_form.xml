@@ -8,23 +8,9 @@
     android:background="@color/orange"
     >
 
-    <TextView
-        android:id="@+id/updateTopic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="@string/requestFormTopic"
-        android:textColor="@color/white"
-        android:paddingStart="20dp"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="414dp"
-        android:layout_height="634dp"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/request_rounded_background"
         android:orientation="vertical"
@@ -40,7 +26,6 @@
             android:id="@+id/scrollView"
             android:layout_width="414dp"
             android:layout_height="659dp"
-            android:paddingBottom="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

@@ -1,5 +1,6 @@
 package com.example.ueefoodprotectionapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -24,6 +25,12 @@ public class RequestFoodForm extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_food_form);
+
+        /*action bar*/
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Request Food Form");
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         requestButton = findViewById(R.id.BacktoHomeButton);
         viewButton = findViewById(R.id.ViewAllButton);
