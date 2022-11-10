@@ -18,12 +18,12 @@ public class CommunityHomepage extends AppCompatActivity {
 
         community = findViewById(R.id.community);
 
-//        community.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(CommunityHomepage.this, RecyclerviewList.class);
-//                startActivity(intent);
-//            }
-//        });
+        community.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CommunityHomepage.this, RecyclerviewList.class);
+                startActivity(intent);
+            }
+        });
     }
 }
