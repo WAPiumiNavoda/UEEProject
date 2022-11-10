@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SingleFood"
+    android:background="@color/orange"
+    >
+
+    <TextView
+        android:id="@+id/updateTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="About to Expire"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="660dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/request_rounded_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="540dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="#D8D4D4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/singleHeadline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Food Item Headline"
+                        android:textColor="@color/black"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"/>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:id="@+id/singleImage"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/img"
+                        android:scaleType="fitXY"
+                        android:layout_marginTop="15dp"
+                        android:layout_gravity="center"
+                        app:shapeAppearance="@style/roundimageview"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginStart="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quantity"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            android:textColor="#FF9800"
+                            android:layout_marginStart="10dp"/>
+
+                        <TextView
+                            android:id="@+id/singleQuantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="23"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            android:textColor="#FF9800"
+                            android:layout_marginStart="10dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Food Item Name: "
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="10dp"/>
+
+                        <TextView
+                            android:id="@+id/singleFood"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Noodles"
+                            android:textSize="22sp"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="10dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Location: "
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="10dp"/>
+
+                        <TextView
+                            android:id="@+id/singleLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Malabe"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="10dp"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_margin="40dp"
+                        android:text="Request"
+                        android:textStyle="bold"
+                        android:textSize="25sp"
+                        android:background="@drawable/request_button"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

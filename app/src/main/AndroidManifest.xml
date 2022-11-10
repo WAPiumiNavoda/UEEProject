@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ueefoodprotectionapp" >
+    package="com.example.ueefoodprotectionapp">
 
     <application
         android:allowBackup="true"
@@ -8,24 +8,31 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.UEEFoodProtectionApp" >
+        android:theme="@style/Theme.UEEFoodProtectionApp">
+        <activity
+            android:name=".SingleFood"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".RecyclerviewList"
-            android:exported="false" >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".CommunityHomepage"
-            android:exported="false" >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".AddFood"
-            android:exported="false" >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -52,7 +59,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
