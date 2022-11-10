@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFood"
+    android:background="@color/orange"
+    >
+
+    <TextView
+        android:id="@+id/updateTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="About to Expire"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="660dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/request_rounded_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/subtopic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subtopic"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/uploadbtn"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_camera_24"
+                    android:background="@drawable/camerashapebtn"
+                    android:layout_marginTop="60dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/relative"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/foodImage"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginTop="45dp"
+                        android:layout_centerHorizontal="true"
+                        app:shapeAppearance="@style/roundimageview"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="235dp"
+                    android:text="Food Item"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/foodId"
+                    android:layout_width="397dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="263dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/search_input"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="323dp"
+                    android:layout_marginStart="25dp"
+                    android:text="Expiry Date"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/foodItem"
+                    android:layout_width="397dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="351dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/search_input"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="411dp"
+                    android:layout_marginStart="25dp"
+                    android:text="Price"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/quantity"
+                    android:layout_width="397dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="439dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/search_input"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="499dp"
+                    android:layout_marginStart="25dp"
+                    android:text="Location"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/location"
+                    android:layout_width="397dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="527dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/search_input"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp" />
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/requestTimeLable"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="572dp"-->
+                <!--                    android:layout_marginStart="25dp"-->
+                <!--                    android:text="Contact Number"-->
+                <!--                    android:textColor="@color/orange"-->
+                <!--                    android:textSize="20sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+
+                <!--                <EditText-->
+                <!--                    android:id="@+id/requestTimeInput"-->
+                <!--                    android:layout_width="397dp"-->
+                <!--                    android:layout_height="50dp"-->
+                <!--                    android:layout_marginStart="10dp"-->
+                <!--                    android:layout_marginTop="600dp"-->
+                <!--                    android:layout_marginEnd="16dp"-->
+                <!--                    android:background="@drawable/search_input"-->
+                <!--                    android:ems="10"-->
+                <!--                    android:paddingLeft="10dp"-->
+                <!--                    android:paddingTop="10dp"-->
+                <!--                    android:paddingRight="10dp"-->
+                <!--                    android:paddingBottom="10dp"/>-->
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/submit"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/location"
+                    android:layout_marginTop="31dp"
+                    android:textSize="18sp"
+                    android:background="@drawable/request_button"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewAll"
+                    android:text="View All"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/submit"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp"
+                    android:background="@drawable/request_button"/>
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
