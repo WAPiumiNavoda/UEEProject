@@ -156,13 +156,15 @@
 
                     </LinearLayout>
 
-                    <Button
+                    <androidx.appcompat.widget.AppCompatButton
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_margin="40dp"
+                        android:textColor="@color/white"
                         android:text="Request"
+                        android:id="@+id/requestButton"
                         android:textStyle="bold"
-                        android:textSize="25sp"
+                        android:textSize="22sp"
                         android:background="@drawable/request_button"/>
 
 
