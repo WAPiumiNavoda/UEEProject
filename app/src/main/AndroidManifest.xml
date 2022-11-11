@@ -86,6 +86,10 @@
             android:name=".NavigationPage"
             android:exported="true" />
 
+       <activity android:name=".HomeFoodMain"
+            android:exported="true"/>
+        <activity android:name=".AddActivity"
+            android:exported="true"/>
 
         <activity
             android:name=".HomeActivity"
