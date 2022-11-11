@@ -60,15 +60,47 @@
         <activity
             android:name=".RequestFoodForm"
             android:exported="false" />
-        <activity
-            android:name=".AddFood"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity
+            android:name=".RegistrationPage"
+            android:exported="true" />
+        <activity
+            android:name=".LoginPage"
+            android:exported="true" />
+        <activity
+            android:name=".ReportToAdminScreen"
+            android:exported="false" />
+        <activity
+            android:name=".RateMeetingScreen"
+            android:exported="false" />
+        <activity
+            android:name=".MeetDetailsScreen"
+            android:exported="false" />
+        <activity
+            android:name=".YourMeetups"
+            android:exported="false" />
+        <activity
+            android:name=".PlaceMeeting"
+            android:exported="true" />
+        <activity
+            android:name=".NavigationPage"
+            android:exported="true" />
+
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true">
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
