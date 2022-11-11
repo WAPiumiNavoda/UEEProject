@@ -14,12 +14,13 @@ import com.google.firebase.auth.FirebaseUser;
 public class NavigationPage extends AppCompatActivity {
     private TextView navBarSocialText;
     private  TextView yourMeetupsScreen;
-    private TextView dayCarePetsText;
+    private TextView HomeFood;
     private  TextView healthCare;
     private TextView placeMeeting;
     private FirebaseAuth mAuth;
     private  TextView currentUserEmail;
     private  TextView addFood;
+
 
     private void onNavBarSocialTextClick() {
 
@@ -39,6 +40,10 @@ public class NavigationPage extends AppCompatActivity {
         Intent intent = new Intent(this, RequestFoodForm.class);
         startActivity(intent);
     }
+    private void onHomeFoodClick() {
+        Intent intent = new Intent(this,HomeFoodMain.class);
+        startActivity(intent);
+    }
 
 
     @Override
@@ -50,7 +55,7 @@ public class NavigationPage extends AppCompatActivity {
 
 
         yourMeetupsScreen = (TextView) findViewById(R.id.yourMeetupsScreen);
-        dayCarePetsText = (TextView) findViewById(R.id.dayCare);
+        HomeFood = (TextView) findViewById(R.id.dayCare);
         placeMeeting = (TextView) findViewById(R.id.placeMeeting);
         currentUserEmail = (TextView) findViewById(R.id.currentuserEmails);
         addFood = (TextView) findViewById(R.id.addFoods);
@@ -61,6 +66,14 @@ public class NavigationPage extends AppCompatActivity {
         if(currentUser != null){
             currentUserEmail.setText(currentUser.getEmail());
         }
+
+        HomeFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onHomeFoodClick();
+            }
+
+        });
 
         yourMeetupsScreen.setOnClickListener(new View.OnClickListener() {
             @Override
