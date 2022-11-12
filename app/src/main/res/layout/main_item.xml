@@ -18,7 +18,7 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img1"
             android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_height="110dp"
             android:src="@drawable/img"
             app:civ_border_color="@color/black" />
 
@@ -35,61 +35,68 @@
 
 
         <TextView
+            android:id="@+id/coursename"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/coursename"
-            android:text="course"
-            android:textSize="18sp"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/black"
             android:layout_below="@+id/txtname"
+            android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/img1"
-            />
+            android:text="course"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
 
         <TextView
+            android:id="@+id/emailname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/emailname"
-            android:text="email"
-            android:textSize="18sp"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/black"
             android:layout_below="@+id/coursename"
+            android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/img1"
-            />
+            android:text="email"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailname"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img1"
+            android:text="phone no"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
         <LinearLayout
-            android:layout_below="@+id/emailname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/emailname"
             android:orientation="horizontal"
 
             >
 
+
             <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="128dp"
+                android:id="@+id/btnEdit"
+                android:layout_width="108dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="15dp"
-                android:text="update"
-                android:textAllCaps="false"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/request_button_border"
-                android:layout_marginRight="20dp"
-                android:id="@+id/btnEdit"
-                />
-
+                android:text="Change"
+                android:textAllCaps="false" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDelete"
-                android:layout_width="128dp"
-                android:layout_marginTop="15dp"
+                android:layout_width="108dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/request_button_border"
-                android:text="delete"
+                android:text="Clear"
                 android:textAllCaps="false" />
         </LinearLayout>
     </RelativeLayout>
