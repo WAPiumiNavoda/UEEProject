@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="730dp"
     tools:context=".SingleFood"
     android:background="@color/orange"
     >
@@ -24,7 +24,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="660dp"
+        android:layout_height="640dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/request_rounded_background"
         android:orientation="vertical"
@@ -35,6 +35,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -42,7 +53,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="540dp"
+                android:layout_height="wrap_content"
                 android:elevation="5dp"
                 app:cardCornerRadius="25dp"
                 app:cardBackgroundColor="#D8D4D4">
@@ -68,7 +79,6 @@
                         android:layout_height="200dp"
                         android:id="@+id/singleImage"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/img"
                         android:scaleType="fitXY"
                         android:layout_marginTop="15dp"
                         android:layout_gravity="center"
@@ -78,7 +88,61 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_marginTop="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Food Item Name: "
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="10dp"/>
+
+                        <TextView
+                            android:id="@+id/singleFood"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Noodles"
+                            android:textSize="22sp"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="10dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Expiry Date: "
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="10dp"/>
+
+                        <TextView
+                            android:id="@+id/singleExpDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="2022/11/11"
+                            android:textColor="@color/black"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
                         android:layout_marginStart="15dp">
 
                         <TextView
@@ -112,22 +176,24 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Food Item Name: "
+                            android:text="Price: "
                             android:textSize="22sp"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:layout_marginStart="10dp"/>
 
                         <TextView
-                            android:id="@+id/singleFood"
+                            android:id="@+id/singlePrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Noodles"
+                            android:text="$ 3"
                             android:textSize="22sp"
                             android:textColor="@color/black"
                             android:layout_marginStart="10dp"/>
 
                     </LinearLayout>
+
+
 
                     <LinearLayout
                         android:layout_marginTop="10dp"
@@ -156,6 +222,33 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact No: "
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="10dp"/>
+
+                        <TextView
+                            android:id="@+id/singleContact"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0112345678"
+                            android:textSize="22sp"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="10dp"/>
+
+                    </LinearLayout>
+
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
@@ -171,6 +264,7 @@
             </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

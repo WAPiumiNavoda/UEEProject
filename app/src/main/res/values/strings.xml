@@ -17,5 +17,6 @@
     <string name="summeryTopicMain">Summery  From the sender</string>
     <string name="updatetopic">Update Form</string>
     <string name="subtopic">Enter your about to expire food items here</string>
+    <string name="updatesubtopic">Edit your about to expire food item details here</string>
     <string name="community">You have successfully added your food item and you can see your about to expire food items in our community screen</string>
 </resources>

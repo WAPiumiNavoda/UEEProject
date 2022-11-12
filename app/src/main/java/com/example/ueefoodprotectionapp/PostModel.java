@@ -2,26 +2,28 @@ package com.example.ueefoodprotectionapp;
 
 public class PostModel {
 
-    private String foodId, foodItem, quantity, location;
+    private String contact, foodItem, quantity, location, expDate, price;
     private String foodImage;
 
     public PostModel() {
     }
 
-    public PostModel(String foodId, String foodItem, String quantity, String location, String foodImage) {
-        this.foodId = foodId;
+    public PostModel(String contact, String foodItem, String quantity, String location, String foodImage, String expDate, String price) {
+        this.contact = contact;
         this.foodItem = foodItem;
         this.quantity = quantity;
         this.location = location;
         this.foodImage = foodImage;
+        this.expDate = expDate;
+        this.price = price;
     }
 
-    public String getFoodId() {
-        return foodId;
+    public String getContact() {
+        return contact;
     }
 
-    public void setFoodId(String foodId) {
-        this.foodId = foodId;
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
     public String getFoodItem() {
@@ -54,5 +56,21 @@ public class PostModel {
 
     public void setFoodImage(String foodImage) {
         this.foodImage = foodImage;
+    }
+
+    public String getExpDate() {
+        return expDate;
+    }
+
+    public void setExpDate(String expDate) {
+        this.expDate = expDate;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 }

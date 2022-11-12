@@ -5,12 +5,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -29,13 +31,18 @@ import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 public class AddFood extends AppCompatActivity {
 
-    EditText foodId, foodItem, quantity, location;
+    EditText contact, foodItem, quantity, location, expDate, price;
     ImageView foodImage, uploadbtn;
     Button submit, viewAll;
     Uri ImageUri;
     RelativeLayout relative;
+    Calendar myCalendar;
 
     private FirebaseDatabase database;
     private FirebaseStorage firebaseStorage;
@@ -55,15 +62,35 @@ public class AddFood extends AppCompatActivity {
         dialog.setTitle("Food Item Uploading");
         dialog.setCanceledOnTouchOutside(false);
 
-        foodId = findViewById(R.id.foodId);
+        contact = findViewById(R.id.contact);
         foodItem = findViewById(R.id.foodItem);
         quantity = findViewById(R.id.quantity);
         location = findViewById(R.id.location);
         foodImage = findViewById(R.id.foodImage);
+        expDate = (EditText) findViewById(R.id.expDate);
+        price = findViewById(R.id.price);
         uploadbtn = findViewById(R.id.uploadbtn);
         submit = findViewById(R.id.submit);
         viewAll = findViewById(R.id.viewAll);
         relative = findViewById(R.id.relative);
+
+        //Date Picker
+        myCalendar = Calendar.getInstance();
+        DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, month);
+                myCalendar.set(Calendar.DAY_OF_MONTH, day);
+                updateLabel(myCalendar, expDate);
+            }
+        };
+        expDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new DatePickerDialog(AddFood.this, date, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
 
         uploadbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,10 +128,12 @@ public class AddFood extends AppCompatActivity {
                                 PostModel postModel = new PostModel();
                                 postModel.setFoodImage(uri.toString());
 
-                                postModel.setFoodId(foodId.getText().toString());
+                                postModel.setContact(contact.getText().toString());
                                 postModel.setFoodItem(foodItem.getText().toString());
                                 postModel.setQuantity(quantity.getText().toString());
                                 postModel.setLocation(location.getText().toString());
+                                postModel.setExpDate(expDate.getText().toString());
+                                postModel.setPrice(price.getText().toString());
 
                                 database.getReference().child("foods").push().setValue(postModel)
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -130,6 +159,12 @@ public class AddFood extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void updateLabel(Calendar myCalendar, EditText expDate) {
+        String myFormat = "MM/dd/yy";
+        SimpleDateFormat dateFormat = new SimpleDateFormat(myFormat, Locale.US);
+        expDate.setText(dateFormat.format(myCalendar.getTime()));
     }
 
     private void UploadImage() {

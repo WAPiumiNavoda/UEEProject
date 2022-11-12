@@ -41,11 +41,11 @@ public class PostAdapter extends FirebaseRecyclerAdapter<PostModel, PostAdapter.
     @Override
     protected void onBindViewHolder(@NonNull final ViewHolder holder, final int position, @NonNull final PostModel model) {
 
-        holder.itemId.setText(model.getFoodId());
         holder.itemHeadLine.setText(model.getFoodItem());
-        holder.itemDescription.setText(model.getFoodItem());
         holder.itemQuantity.setText(model.getQuantity());
         holder.itemLocation.setText(model.getLocation());
+        holder.itemExpDate.setText(model.getExpDate());
+        holder.itemPrice.setText(model.getPrice());
 
         String imageUri = model.getFoodImage();
         Picasso.get().load(imageUri).into(holder.itemImage);
@@ -60,6 +60,9 @@ public class PostAdapter extends FirebaseRecyclerAdapter<PostModel, PostAdapter.
                 intent.putExtra("singleQuantity", model.getQuantity());
                 intent.putExtra("singleFood", model.getFoodItem());
                 intent.putExtra("singleLocation", model.getLocation());
+                intent.putExtra("singleContact", model.getContact());
+                intent.putExtra("singleExpDate", model.getExpDate());
+                intent.putExtra("singlePrice", model.getPrice());
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
@@ -70,7 +73,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<PostModel, PostAdapter.
             @Override
             public void onClick(View view) {
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(holder.itemId.getContext());
+                AlertDialog.Builder builder = new AlertDialog.Builder(holder.itemHeadLine.getContext());
                 builder.setTitle("Are you Sure?");
                 builder.setMessage("Deleted data can't be Undo.");
 
@@ -110,26 +113,32 @@ public class PostAdapter extends FirebaseRecyclerAdapter<PostModel, PostAdapter.
 
                 View holderView = dialog.getHolderView();
 
-                EditText foodId = holderView.findViewById(R.id.updateFoodId);
+                EditText contact = holderView.findViewById(R.id.updateContact);
                 EditText foodItem = holderView.findViewById(R.id.updateFoodItem);
                 EditText quantity = holderView.findViewById(R.id.updateQuantity);
                 EditText location = holderView.findViewById(R.id.updateLocation);
+                EditText expDate = holderView.findViewById(R.id.updateExpDate);
+                EditText price = holderView.findViewById(R.id.updatePrice);
                 Button btnUpdate = holderView.findViewById(R.id.btnUpdate);
 
-                foodId.setText(model.getFoodId());
+                contact.setText(model.getContact());
                 foodItem.setText(model.getFoodItem());
                 quantity.setText(model.getQuantity());
                 location.setText(model.getLocation());
+                expDate.setText(model.getExpDate());
+                price.setText(model.getPrice());
 
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
                         Map<String, Object> map = new HashMap<>();
-                        map.put("foodId", foodId.getText().toString());
+                        map.put("contact", contact.getText().toString());
                         map.put("foodItem", foodItem.getText().toString());
                         map.put("quantity", quantity.getText().toString());
                         map.put("location", location.getText().toString());
+                        map.put("expDate", expDate.getText().toString());
+                        map.put("price", price.getText().toString());
                         FirebaseDatabase.getInstance().getReference().child("foods")
                                 .child(getRef(position).getKey())
                                 .updateChildren(map).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -166,18 +175,18 @@ public class PostAdapter extends FirebaseRecyclerAdapter<PostModel, PostAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView itemId, itemHeadLine, itemDescription, itemQuantity, itemLocation;
+        TextView itemHeadLine, itemQuantity, itemLocation, itemExpDate, itemPrice;
         ImageView itemImage;
         Button update, delete;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            itemId = itemView.findViewById(R.id.itemId);
             itemHeadLine = itemView.findViewById(R.id.itemHeadLine);
-            itemDescription = itemView.findViewById(R.id.itemDescription);
             itemQuantity = itemView.findViewById(R.id.itemQuantity);
             itemLocation = itemView.findViewById(R.id.itemLocation);
+            itemExpDate = itemView.findViewById(R.id.itemExpDate);
+            itemPrice = itemView.findViewById(R.id.itemPrice);
             itemImage = itemView.findViewById(R.id.itemImage);
 
             update = itemView.findViewById(R.id.update);
