@@ -4,15 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_add_food.xml" value="0.2234375" />
+        <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_community_homepage.xml" value="0.2234375" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_main.xml" value="0.2234375" />
-        <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_map.xml" value="0.2234375" />
+        <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_map.xml" value="0.1" />
+        <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_recyclerview_list.xml" value="0.2234375" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_request_food_form.xml" value="0.264" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_request_foodlist.xml" value="0.2234375" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_search_food.xml" value="0.2234375" />
-        <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_search_food_list.xml" value="0.2234375" />
+        <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_search_food_list.xml" value="0.264" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_single_food.xml" value="0.2234375" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_update_request.xml" value="0.264" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/content.xml" value="0.1" />
+        <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/food.xml" value="0.1" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/main_item.xml" value="0.264" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/menu/search.xml" value="0.2234375" />
       </map>
