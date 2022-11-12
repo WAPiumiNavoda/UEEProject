@@ -34,6 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="55dp"
         android:text="Community Area"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:drawableRight="@drawable/ic_baseline_double_arrow_24"
         android:textSize="20sp"
         android:textStyle="bold"
         android:paddingLeft="30dp"

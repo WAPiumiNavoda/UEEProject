@@ -13,7 +13,7 @@ import com.squareup.picasso.Picasso;
 
 public class SingleFood extends AppCompatActivity {
 
-    TextView singleHeadline, singleQuantity, singleFood, singleLocation;
+    TextView singleContact, singleHeadline, singleQuantity, singleFood, singleLocation, singleExpDate, singlePrice;
     ImageView singleImage;
     Button requestButton;
 
@@ -22,10 +22,13 @@ public class SingleFood extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_food);
 
+        singleContact = findViewById(R.id.singleContact);
         singleHeadline = findViewById(R.id.singleHeadline);
         singleQuantity = findViewById(R.id.singleQuantity);
         singleFood = findViewById(R.id.singleFood);
         singleLocation = findViewById(R.id.singleLocation);
+        singleExpDate = findViewById(R.id.singleExpDate);
+        singlePrice = findViewById(R.id.singlePrice);
         singleImage = findViewById(R.id.singleImage);
         requestButton = findViewById(R.id.requestButton);
 
@@ -33,17 +36,10 @@ public class SingleFood extends AppCompatActivity {
                 .placeholder(R.drawable.background)
                 .into(singleImage);
 
+        singleContact.setText(getIntent().getStringExtra("singleContact"));
         singleHeadline.setText(getIntent().getStringExtra("singleHeadline"));
         singleQuantity.setText(getIntent().getStringExtra("singleQuantity"));
         singleFood.setText(getIntent().getStringExtra("singleFood"));
         singleLocation.setText(getIntent().getStringExtra("singleLocation"));
-
-        requestButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(SingleFood.this, RequestFoodForm.class));
-                finish();
-            }
-        });
     }
 }

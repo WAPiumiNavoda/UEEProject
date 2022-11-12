@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="730dp"
     tools:context=".AddFood"
     android:background="@color/orange"
     >
@@ -24,7 +24,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="660dp"
+        android:layout_height="640dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/request_rounded_background"
         android:orientation="vertical"
@@ -101,7 +101,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/foodId"
+                    android:id="@+id/foodItem"
                     android:layout_width="397dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="10dp"
@@ -124,7 +124,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/foodItem"
+                    android:id="@+id/expDate"
                     android:layout_width="397dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="10dp"
@@ -134,7 +134,15 @@
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp" />
+                    android:paddingBottom="10dp"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusableInTouchMode="false"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -146,10 +154,26 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="411dp"
+                        android:layout_marginStart="140dp"
+                        android:text="Quantity"
+                        android:textColor="@color/orange"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/quantity"
-                    android:layout_width="397dp"
+                    android:id="@+id/price"
+                    android:layout_width="163dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="439dp"
@@ -159,6 +183,21 @@
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp" />
+
+                    <EditText
+                        android:id="@+id/quantity"
+                        android:layout_width="163dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="439dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/search_input"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp" />
+
+                </LinearLayout>
 
 
                 <TextView
@@ -185,31 +224,29 @@
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp" />
 
-                <!--                <TextView-->
-                <!--                    android:id="@+id/requestTimeLable"-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginTop="572dp"-->
-                <!--                    android:layout_marginStart="25dp"-->
-                <!--                    android:text="Contact Number"-->
-                <!--                    android:textColor="@color/orange"-->
-                <!--                    android:textSize="20sp"-->
-                <!--                    android:textStyle="bold" />-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="587dp"
+                    android:layout_marginStart="25dp"
+                    android:text="Contact Number"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
 
-                <!--                <EditText-->
-                <!--                    android:id="@+id/requestTimeInput"-->
-                <!--                    android:layout_width="397dp"-->
-                <!--                    android:layout_height="50dp"-->
-                <!--                    android:layout_marginStart="10dp"-->
-                <!--                    android:layout_marginTop="600dp"-->
-                <!--                    android:layout_marginEnd="16dp"-->
-                <!--                    android:background="@drawable/search_input"-->
-                <!--                    android:ems="10"-->
-                <!--                    android:paddingLeft="10dp"-->
-                <!--                    android:paddingTop="10dp"-->
-                <!--                    android:paddingRight="10dp"-->
-                <!--                    android:paddingBottom="10dp"/>-->
+                <EditText
+                    android:id="@+id/contact"
+                    android:layout_width="397dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="615dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/search_input"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp" />
 
                 <Button
                     android:layout_width="match_parent"
@@ -217,7 +254,7 @@
                     android:id="@+id/submit"
                     android:text="Submit"
                     android:textColor="@color/white"
-                    android:layout_below="@+id/location"
+                    android:layout_below="@+id/contact"
                     android:layout_marginTop="31dp"
                     android:textSize="18sp"
                     android:background="@drawable/request_button"/>
