@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTopic1"
+        android:text="Change Reqesut"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="30sp"
+        android:background="@color/orange"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:text="Your Name"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/updateNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/search_input"/>
+
+        <TextView
+            android:layout_width="179dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:text="Change Phone No"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/requestPhoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/search_input"/>
+
+        <TextView
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:text="Change Date"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/requestDateInput"
+            android:layout_below="@+id/requestPhoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:inputType="text"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/search_input"/>
+
+        <TextView
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Change Time"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/requestTimeInput"
+            android:layout_below="@+id/requestDateInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:inputType="text"
+            android:maxLength="10"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/search_input"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/UpdateButton"
+            android:text="Update"
+            android:textSize="20sp"
+            android:textColor="@color/orange"
+            android:layout_below="@+id/location"
+            android:background="@drawable/request_button_border"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>

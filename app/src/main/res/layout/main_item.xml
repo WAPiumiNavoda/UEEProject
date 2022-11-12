@@ -30,8 +30,7 @@
             android:layout_toRightOf="@+id/img1"
             android:text="teacher name"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="20sp" />
 
 
         <TextView

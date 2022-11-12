@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_add_food.xml" value="0.2234375" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_community_homepage.xml" value="0.2234375" />
+        <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_home_food_add.xml" value="0.20364583333333333" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_main.xml" value="0.2234375" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_map.xml" value="0.1" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_recyclerview_list.xml" value="0.2234375" />
@@ -13,11 +14,12 @@
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_search_food.xml" value="0.2234375" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_search_food_list.xml" value="0.264" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_single_food.xml" value="0.2234375" />
-        <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_update_request.xml" value="0.1" />
+        <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_update_request.xml" value="0.2" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/content.xml" value="0.1" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/food.xml" value="0.1" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/home_supply_item.xml" value="0.2234375" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/main_item.xml" value="0.25868725868725867" />
+        <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/request_change_form.xml" value="0.20364583333333333" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/menu/main_menu.xml" value="0.20364583333333333" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/menu/search.xml" value="0.2234375" />
       </map>

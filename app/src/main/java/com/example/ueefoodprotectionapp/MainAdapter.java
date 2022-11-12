@@ -53,7 +53,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.M
             @Override
             public void onClick(View view) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
-                        .setContentHolder(new ViewHolder( R.layout.activity_update_request))
+                        .setContentHolder(new ViewHolder( R.layout.request_change_form))
                         .setExpanded(false,2000)
                         .create();
 
