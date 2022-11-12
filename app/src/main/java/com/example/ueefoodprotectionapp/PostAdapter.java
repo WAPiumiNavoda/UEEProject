@@ -50,24 +50,6 @@ public class PostAdapter extends FirebaseRecyclerAdapter<PostModel, PostAdapter.
         String imageUri = model.getFoodImage();
         Picasso.get().load(imageUri).into(holder.itemImage);
 
-        //View Single Item
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, SingleFood.class);
-                intent.putExtra("singleImage", model.getFoodImage());
-                intent.putExtra("singleHeadline", model.getFoodItem());
-                intent.putExtra("singleQuantity", model.getQuantity());
-                intent.putExtra("singleFood", model.getFoodItem());
-                intent.putExtra("singleLocation", model.getLocation());
-                intent.putExtra("singleContact", model.getContact());
-                intent.putExtra("singleExpDate", model.getExpDate());
-                intent.putExtra("singlePrice", model.getPrice());
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
-            }
-        });
-
         //Delete Data
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override

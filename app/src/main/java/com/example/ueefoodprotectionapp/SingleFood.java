@@ -47,7 +47,7 @@ public class SingleFood extends AppCompatActivity {
         requestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SingleFood.this, RequestFoodForm.class));
+                startActivity(new Intent(SingleFood.this, AddFood.class));
                 finish();
             }
         });

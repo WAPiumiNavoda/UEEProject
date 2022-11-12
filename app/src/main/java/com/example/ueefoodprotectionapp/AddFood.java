@@ -43,6 +43,7 @@ public class AddFood extends AppCompatActivity {
     Uri ImageUri;
     RelativeLayout relative;
     Calendar myCalendar;
+    boolean isAllFieldsChecked = false;
 
     private FirebaseDatabase database;
     private FirebaseStorage firebaseStorage;
@@ -114,48 +115,51 @@ public class AddFood extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                dialog.show();
+                isAllFieldsChecked = CheckAllFields();
+                if (isAllFieldsChecked) {
+                    dialog.show();
 
-                final StorageReference reference = firebaseStorage.getReference().child("foods")
-                        .child(System.currentTimeMillis()+"");
+                    final StorageReference reference = firebaseStorage.getReference().child("foods")
+                            .child(System.currentTimeMillis() + "");
 
-                reference.putFile(ImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                            @Override
-                            public void onSuccess(Uri uri) {
-                                PostModel postModel = new PostModel();
-                                postModel.setFoodImage(uri.toString());
+                    reference.putFile(ImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    PostModel postModel = new PostModel();
+                                    postModel.setFoodImage(uri.toString());
 
-                                postModel.setContact(contact.getText().toString());
-                                postModel.setFoodItem(foodItem.getText().toString());
-                                postModel.setQuantity(quantity.getText().toString());
-                                postModel.setLocation(location.getText().toString());
-                                postModel.setExpDate(expDate.getText().toString());
-                                postModel.setPrice(price.getText().toString());
+                                    postModel.setContact(contact.getText().toString());
+                                    postModel.setFoodItem(foodItem.getText().toString());
+                                    postModel.setQuantity(quantity.getText().toString());
+                                    postModel.setLocation(location.getText().toString());
+                                    postModel.setExpDate(expDate.getText().toString());
+                                    postModel.setPrice(price.getText().toString());
 
-                                database.getReference().child("foods").push().setValue(postModel)
-                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                            @Override
-                                            public void onSuccess(Void unused) {
-                                                Toast.makeText(AddFood.this, "Food Item Added Successfully", Toast.LENGTH_SHORT).show();
-                                                dialog.dismiss();
+                                    database.getReference().child("foods").push().setValue(postModel)
+                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void unused) {
+                                                    Toast.makeText(AddFood.this, "Food Item Added Successfully", Toast.LENGTH_SHORT).show();
+                                                    dialog.dismiss();
 
-                                                Intent intent = new Intent(AddFood.this, CommunityHomepage.class);
-                                                startActivity(intent);
-                                            }
-                                        }).addOnFailureListener(new OnFailureListener() {
-                                            @Override
-                                            public void onFailure(@NonNull Exception e) {
-                                                dialog.dismiss();
-                                                Toast.makeText(AddFood.this, "Error Occurred", Toast.LENGTH_SHORT).show();
-                                            }
-                                        });
-                            }
-                        });
-                    }
-                });
+                                                    Intent intent = new Intent(AddFood.this, CommunityHomepage.class);
+                                                    startActivity(intent);
+                                                }
+                                            }).addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    dialog.dismiss();
+                                                    Toast.makeText(AddFood.this, "Error Occurred", Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                }
+                            });
+                        }
+                    });
+                }
             }
         });
 
@@ -202,4 +206,38 @@ public class AddFood extends AppCompatActivity {
             foodImage.setImageURI(ImageUri);
         }
     }
+
+    //Validations
+    private boolean CheckAllFields() {
+        if(contact.length() == 0){
+            contact.setError("This field is required");
+            return false;
+        }
+        if(foodItem.length() == 0){
+            foodItem.setError("This field is required");
+            return false;
+        }
+        if (quantity.length() == 0) {
+            quantity.setError("This field is required");
+            return false;
+        }
+        if(location.length() == 0){
+            location.setError("This field is required");
+            return false;
+        }
+        if(expDate.length() == 0){
+            expDate.setError("This field is required");
+            return false;
+        }
+        if(price.length() == 0){
+            price.setError("This field is required");
+            return false;
+        }
+        else if(contact.length() < 10){
+            contact.setError("Please enter a valid mobile number");
+            return false;
+        }
+        return true;
+    }
+
 }
