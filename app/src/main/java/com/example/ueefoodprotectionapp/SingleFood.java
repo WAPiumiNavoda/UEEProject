@@ -41,5 +41,15 @@ public class SingleFood extends AppCompatActivity {
         singleQuantity.setText(getIntent().getStringExtra("singleQuantity"));
         singleFood.setText(getIntent().getStringExtra("singleFood"));
         singleLocation.setText(getIntent().getStringExtra("singleLocation"));
+        singleExpDate.setText(getIntent().getStringExtra("singleExpDate"));
+        singlePrice.setText(getIntent().getStringExtra("singlePrice"));
+
+        requestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SingleFood.this, RequestFoodForm.class));
+                finish();
+            }
+        });
     }
 }
