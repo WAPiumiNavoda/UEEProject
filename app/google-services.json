@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "15997586150",
-    "firebase_url": "https://ueefoodprotectionapp-default-rtdb.firebaseio.com",
-    "project_id": "ueefoodprotectionapp",
-    "storage_bucket": "ueefoodprotectionapp.appspot.com"
+    "project_number": "367118442231",
+    "firebase_url": "https://uee-project-d96f1-default-rtdb.firebaseio.com",
+    "project_id": "uee-project-d96f1",
+    "storage_bucket": "uee-project-d96f1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:15997586150:android:07dbb446b9f2273679c927",
+        "mobilesdk_app_id": "1:367118442231:android:61542ba9838f53b863fdf2",
         "android_client_info": {
           "package_name": "com.example.ueefoodprotectionapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "15997586150-u5kscuueqr1gspra1ehfatnc5si35npu.apps.googleusercontent.com",
+          "client_id": "367118442231-3tnk803817l8cd2r1p3i5jjg29gkhn2i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAXLm4ygyitd7zegnwkjeL-KhNXfPxU2S4"
+          "current_key": "AIzaSyBCbU0pnvUmvKX7p8MPrGtfW4403ICCZ38"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "15997586150-u5kscuueqr1gspra1ehfatnc5si35npu.apps.googleusercontent.com",
+              "client_id": "367118442231-3tnk803817l8cd2r1p3i5jjg29gkhn2i.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

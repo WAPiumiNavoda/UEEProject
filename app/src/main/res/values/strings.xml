@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Request Food</string>
+    <string name="app_name"> Foodienator </string>
     <string name="searchTopic">Request Food</string>
     <string name="sub_searchTopic">Find foods near you</string>
     <string name="sub_searchTopicSec">"Please enter your location and Food name to find food near you "</string>
@@ -16,6 +16,88 @@
     <string name="requestFromTime">Time</string>
     <string name="summeryTopicMain">Summery  From the sender</string>
     <string name="updatetopic">Update Form</string>
+    <string name="Asupply">AVAILABLE SUPPLIES</string>
     <string name="subtopic">Enter your about to expire food items here</string>
     <string name="community">You have successfully added your food item and you can see your about to expire food items in our community screen</string>
+    <string name="navbar_title">
+
+        Choose where you wanna go!
+    </string>
+
+    <string name="venue_label"> Venue </string>
+    <string name="venue_hint"> Enter the venue for the meeting  </string>
+
+    <string name="meeting_description_text"> Enter small description </string>
+
+    <string name="meetup_date"> Meetup Date </string>
+
+    <string name="empty_string">
+
+    </string>
+
+    <string name="healthcare">Healthcare</string>
+    <string name="doctor_booking">Doctor Channeling</string>
+    <string name="daycare">Daycare</string>
+    <string name="findpets">Find Pets</string>
+    <string name="username">Hey,</string>
+    <string name="userwithemail"> pasindu@email.com </string>
+    <string name="socialized_pets">Your pets on social</string>
+
+    <string name="meet_with_screen">
+        Meet With John Doe
+    </string>
+    <string name="meet_date">
+        Meeting date - [2023-07-07]
+    </string>
+    <string name="venue">Colombo</string>
+    <string name="mark_as_completed">Mark as completed</string>
+    <string name="reschedule"> Reschedule </string>
+    <string name="cancel">Cancel</string>
+    <string name="rate_meeting"> Rate your meeting </string>
+    <string name="report_to_admin"> Report to admin </string>
+    <string name="enter_your_experience"> Enter your experience </string>
+    <string name="brief_description_place_meeting"> Special Note about the meeting </string>
+    <string name="place_meeting_text"> Place Meeting </string>
+    <string name="your_meetups"> Your Meetups </string>
+    <string name="home_food_management"> Home Food Management </string>
+    <string name="meeting_title">Meeting title</string>
+    <string name="social_place_meeting"> Place Meeting </string>
+    <string name="other_participant_name"> Other Participant Name </string>
+    <string name="social_puppy_call_owner"> Place Meeting </string>
+    <string name="social_your_meetups"> Your Meetups </string>
+    <string name="puppuy_name"> John Doe </string>
+    <string name="homepage_main_text">Good people, good food, good time!</string>
+    <string name="get_started_button"> Get Started </string>
+    <string name="homepage_first_description"> Welcome to Foodienator . This is an app which help you to manage your
+    foods inside your home.</string>
+    <string name="homepage_second_description">
+        By pressing get started button you are agreeing to our terms and conditions.
+    </string>
+
+    <string name="social_user_request_text"> Hey, I am interested on this item </string>
+    <string name="social_user_view_profile"> View Profile </string>
+
+    <string name="homepage_getstarted_button"> Get Started </string>
+    <string name="homepage_dog_image"> Dog Image </string>
+    <string name="login_page_title"> Login </string>
+    <string name="enter_login_credentials_text"> Enter your login credentials to login
+    to the application</string>
+    <string name="login_page_labels_email">Email</string>
+    <string name="login_page_labels_password">Password</string>
+    <string name="login_page_labels_emailhint">Enter Your Email</string>
+    <string name="login_page_labels_password_hint">Enter Your Password</string>
+    <string name="login_button"> Login </string>
+    <string name="login_page_not_registered_text"> Do not have an account as yet? Click here to register </string>
+    <string name="register_page_title"> Register </string>
+    <string name="enter_registration_credentials_text"> Enter your details to register for the application</string>
+    <string name="go_to_login_text"> Have an account? Click here to login</string>
+    <string name="username_input"> Your Name</string>
+    <string name="register_button"> Register </string>
+    <string name="social_add_your_dog_small_description"> Enter the meeting details to
+    place the meeting</string>
+    <string name="social_dog_description">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </string>
+    <string name="socialbackButtonImage">Back Button</string>
+    <string name="social_puppuy_category"> I am John Doe </string>
 </resources>
