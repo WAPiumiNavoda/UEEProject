@@ -33,7 +33,7 @@ public class RequestFoodForm extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         requestButton = findViewById(R.id.BacktoHomeButton);
-        viewButton = findViewById(R.id.ViewAllButton);
+
 
         Uname = findViewById(R.id.updateNameInput);
         UcurrentLocation = findViewById(R.id.requestLocationInput);
@@ -54,12 +54,6 @@ public class RequestFoodForm extends AppCompatActivity {
             }
         });
 
-        viewButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(RequestFoodForm.this, MainActivity.class));
-            }
-        });
 
     }
 

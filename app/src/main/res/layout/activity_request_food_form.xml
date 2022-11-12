@@ -24,11 +24,11 @@
 
         <ScrollView
             android:id="@+id/scrollView"
-            android:layout_width="414dp"
-            android:layout_height="659dp"
+            android:layout_width="415dp"
+            android:layout_height="733dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
@@ -45,7 +45,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="72dp"
-                    android:text="@string/requestFormSubTopic"
+                    android:text="Request Your Food By Fiiling This Form"
                     android:textColor="@color/black"
                     android:textSize="18dp"
                     android:textStyle="bold"
@@ -55,24 +55,24 @@
 
                 <TextView
                     android:id="@+id/nameUpdateLable"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="104dp"
+                    android:layout_height="0dp"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="116dp"
+                    android:layout_marginTop="124dp"
                     android:layout_marginEnd="16dp"
                     android:text="@string/requestFormNameInput"
                     android:textColor="@color/orange"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.04"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
                     android:id="@+id/updateNameInput"
-                    android:layout_width="367dp"
-                    android:layout_height="50dp"
+                    android:layout_width="348dp"
+                    android:layout_height="47dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginEnd="16dp"
@@ -88,7 +88,7 @@
                     android:textColor="@color/black"
                     android:textColorHint="#546E7A"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.533"
+                    app:layout_constraintHorizontal_bias="0.441"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/nameUpdateLable" />
 
@@ -96,20 +96,20 @@
                     android:id="@+id/UpdateLocationLable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="196dp"
+                    android:layout_marginTop="204dp"
                     android:text="@string/requestFormLocationInput"
                     android:textColor="@color/orange"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.057"
+                    app:layout_constraintHorizontal_bias="0.128"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
                     android:id="@+id/requestLocationInput"
-                    android:layout_width="367dp"
-                    android:layout_height="50dp"
+                    android:layout_width="348dp"
+                    android:layout_height="47dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="228dp"
                     android:layout_marginEnd="16dp"
@@ -125,26 +125,28 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints" />
 
+
                 <TextView
                     android:id="@+id/UpdateAddressLable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="288dp"
+                    android:layout_marginTop="284dp"
                     android:text="@string/requestFormAddressInput"
                     android:textColor="@color/orange"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.068"
+                    app:layout_constraintHorizontal_bias="0.103"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+
                 <EditText
                     android:id="@+id/requestAddressInput"
-                    android:layout_width="367dp"
-                    android:layout_height="50dp"
+                    android:layout_width="348dp"
+                    android:layout_height="47dp"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="312dp"
+                    android:layout_marginTop="308dp"
                     android:layout_marginEnd="16dp"
                     android:background="@drawable/search_input"
                     android:ems="10"
@@ -153,7 +155,7 @@
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.407"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints" />
@@ -162,23 +164,23 @@
                     android:id="@+id/UpdatePhonrLable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="376dp"
+                    android:layout_marginTop="364dp"
                     android:text="@string/requestFormPhone"
                     android:textColor="@color/orange"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.083"
+                    app:layout_constraintHorizontal_bias="0.094"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
 
                 <EditText
                     android:id="@+id/requestPhoneInput"
-                    android:layout_width="367dp"
-                    android:layout_height="50dp"
+                    android:layout_width="348dp"
+                    android:layout_height="47dp"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="408dp"
+                    android:layout_marginTop="388dp"
                     android:layout_marginEnd="16dp"
                     android:background="@drawable/search_input"
                     android:ems="10"
@@ -187,33 +189,31 @@
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.296"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints" />
-
 
                 <TextView
                     android:id="@+id/UpdateDateLable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="464dp"
+                    android:layout_marginTop="448dp"
                     android:text="@string/requestFormDate"
                     android:textColor="@color/orange"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.083"
+                    app:layout_constraintHorizontal_bias="0.084"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
                 <EditText
                     android:id="@+id/requestDateInput"
-                    android:layout_width="367dp"
-                    android:layout_height="50dp"
+                    android:layout_width="348dp"
+                    android:layout_height="47dp"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="508dp"
+                    android:layout_marginTop="472dp"
                     android:layout_marginEnd="16dp"
                     android:background="@drawable/search_input"
                     android:ems="10"
@@ -222,7 +222,7 @@
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.296"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints" />
@@ -231,23 +231,22 @@
                     android:id="@+id/requestTimeLable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="560dp"
+                    android:layout_marginTop="532dp"
                     android:text="@string/requestFromTime"
                     android:textColor="@color/orange"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.083"
+                    app:layout_constraintHorizontal_bias="0.085"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
                 <EditText
                     android:id="@+id/requestTimeInput"
-                    android:layout_width="367dp"
-                    android:layout_height="50dp"
+                    android:layout_width="348dp"
+                    android:layout_height="47dp"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="612dp"
+                    android:layout_marginTop="556dp"
                     android:layout_marginEnd="16dp"
                     android:background="@drawable/search_input"
                     android:ems="10"
@@ -256,31 +255,19 @@
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.296"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints" />
 
                 <Button
                     android:id="@+id/BacktoHomeButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="676dp"
+                    android:layout_width="177dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="644dp"
                     android:background="@drawable/request_button_border"
-                    android:text="Button"
+                    android:text="Request Here"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.212"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <Button
-                    android:id="@+id/ViewAllButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="676dp"
-                    android:text="View All"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.752"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

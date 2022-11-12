@@ -3,11 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/SLIIT/Semester 5/UEE_Merged/app/src/main/res/font/.xml" value="0.24444444444444444" />
-        <entry key="..\:/SLIIT/Semester 5/UEE_Merged/app/src/main/res/layout/activity_navigation_page.xml" value="0.2" />
-        <entry key="..\:/SLIIT/Semester 5/UEE_Merged/app/src/main/res/layout/activity_place_meeting.xml" value="0.14375" />
-        <entry key="..\:/SLIIT/Semester 5/UEE_Merged/app/src/main/res/layout/activity_social_user_details.xml" value="0.14375" />
-        <entry key="..\:/SLIIT/Semester 5/UEE_Merged/app/src/main/res/layout/activity_your_meetups.xml" value="0.22327898550724637" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_add_food.xml" value="0.2234375" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_community_homepage.xml" value="0.2234375" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_main.xml" value="0.2234375" />
@@ -21,6 +16,7 @@
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/activity_update_request.xml" value="0.264" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/content.xml" value="0.1" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/food.xml" value="0.1" />
+        <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/home_supply_item.xml" value="0.2234375" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/layout/main_item.xml" value="0.264" />
         <entry key="..\:/UEEFoodProtectionApp/app/src/main/res/menu/search.xml" value="0.2234375" />
       </map>
