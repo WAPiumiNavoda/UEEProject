@@ -2,7 +2,10 @@ package com.example.ueefoodprotectionapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,6 +15,7 @@ public class SingleFood extends AppCompatActivity {
 
     TextView singleContact, singleHeadline, singleQuantity, singleFood, singleLocation, singleExpDate, singlePrice;
     ImageView singleImage;
+    Button requestButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,7 @@ public class SingleFood extends AppCompatActivity {
         singleExpDate = findViewById(R.id.singleExpDate);
         singlePrice = findViewById(R.id.singlePrice);
         singleImage = findViewById(R.id.singleImage);
+        requestButton = findViewById(R.id.requestButton);
 
         Picasso.get().load(getIntent().getStringExtra("singleImage"))
                 .placeholder(R.drawable.background)
@@ -36,7 +41,5 @@ public class SingleFood extends AppCompatActivity {
         singleQuantity.setText(getIntent().getStringExtra("singleQuantity"));
         singleFood.setText(getIntent().getStringExtra("singleFood"));
         singleLocation.setText(getIntent().getStringExtra("singleLocation"));
-        singleExpDate.setText(getIntent().getStringExtra("singleExpDate"));
-        singlePrice.setText(getIntent().getStringExtra("singlePrice"));
     }
 }

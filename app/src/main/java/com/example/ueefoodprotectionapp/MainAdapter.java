@@ -40,8 +40,9 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.M
     @Override
     protected void onBindViewHolder(@NonNull MyViewolder holder, int position, @NonNull MainModel model) {
         holder.Username.setText(model.getUserName());
-        holder.UserTime.setText(model.getAddress());
+        holder.UserTime.setText(model.getTime());
         holder.UserDate.setText(model.getDate());
+        holder.UserPhone.setText(model.getPhone());
 //        Glide.with(holder.img.getContext())
 //                .load(model.getUrl())
 //                .placeholder(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark)
@@ -52,8 +53,8 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.M
             @Override
             public void onClick(View view) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
-                        .setContentHolder(new ViewHolder( R.layout.activity_update_request))
-                        .setExpanded(true,2100)
+                        .setContentHolder(new ViewHolder( R.layout.request_change_form))
+                        .setExpanded(false,2000)
                         .create();
 
 //                dialogPlus.show();
@@ -61,11 +62,13 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.M
                 EditText Uname  = v.findViewById(R.id.updateNameInput);
                 EditText UDate = v.findViewById(R.id.requestDateInput);
                 EditText UTime = v.findViewById(R.id.requestTimeInput);
+                EditText UPhone = v.findViewById(R.id.requestPhoneInput);
 
                 Button btnUpdate = v.findViewById(R.id.UpdateButton);
                 Uname.setText(model.getUserName());
                 UDate.setText(model.getDate());
                 UTime.setText(model.getTime());
+                UPhone.setText(model.getPhone());
 
                 dialogPlus.show();
 
@@ -76,6 +79,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.M
                         map.put("userName" ,Uname.getText().toString());
                         map.put("date" ,UDate.getText().toString());
                         map.put("time" ,UTime.getText().toString());
+                        map.put("phone",UPhone.getText().toString());
 //                        map.put("userName" ,Uname.getText().toString());
 //                        map.put("userName" ,Uname.getText().toString());
 
@@ -138,7 +142,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.M
     class MyViewolder extends RecyclerView.ViewHolder{
 
         CircleImageView img;
-        TextView Username,UserDate, UserTime;
+        TextView Username,UserDate, UserTime,UserPhone;
         Button delete,update;
 
         public MyViewolder(@NonNull View itemView) {
@@ -147,6 +151,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.M
             Username = (TextView) itemView.findViewById(R.id.txtname);
             UserDate = (TextView) itemView.findViewById(R.id.coursename);
             UserTime = (TextView) itemView.findViewById(R.id.emailname);
+            UserPhone = (TextView) itemView.findViewById(R.id.phone);
             delete = (Button) itemView.findViewById(R.id.btnDelete);
             update = (Button) itemView.findViewById(R.id.btnEdit);
 
