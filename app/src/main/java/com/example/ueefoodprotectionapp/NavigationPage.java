@@ -37,7 +37,7 @@ public class NavigationPage extends AppCompatActivity {
     }
 
     public void  onAddFoodClick() {
-        Intent intent = new Intent(this, RequestFoodForm.class);
+        Intent intent = new Intent(this, AddFood.class);
         startActivity(intent);
     }
     private void onHomeFoodClick() {
