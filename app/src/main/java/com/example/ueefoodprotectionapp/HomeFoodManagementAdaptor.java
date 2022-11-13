@@ -62,7 +62,7 @@ public class HomeFoodManagementAdaptor extends FirebaseRecyclerAdapter<HomeFoodM
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.imgUrl.getContext())
                         .setContentHolder(new ViewHolder(R.layout.home_food_change_popup))
-                        .setExpanded(true,1400)
+                        .setExpanded(true,1800)
                         .create();
 
                 // dialogPlus.show();
@@ -85,7 +85,7 @@ public class HomeFoodManagementAdaptor extends FirebaseRecyclerAdapter<HomeFoodM
 
 
                 dialogPlus.show();
-
+                //update Button
                 btnChange.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

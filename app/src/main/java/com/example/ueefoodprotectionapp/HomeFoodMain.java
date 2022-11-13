@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.SearchView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,7 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
         setContentView(R.layout.activity_home_supply_main);
 
     recyclerView = (RecyclerView)findViewById(R.id.rv);
-    recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    recyclerView.setLayoutManager(new LinearLayoutManager(HomeFoodMain.this));
 
         FirebaseRecyclerOptions<HomeFoodMainModel> options =
                 new FirebaseRecyclerOptions.Builder<HomeFoodMainModel>()
@@ -47,6 +48,10 @@ import com.google.firebase.database.FirebaseDatabase;
                 startActivity(new Intent(getApplicationContext(),AddActivity.class));
             }
         });
+        ActionBar HomeMainAB = getSupportActionBar();
+        HomeMainAB.setTitle("Home Food Management ");
+        HomeMainAB.setDisplayHomeAsUpEnabled(true);
+        HomeMainAB.setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -91,6 +96,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
         homeFoodManagementAdaptor = new HomeFoodManagementAdaptor(options);
         homeFoodManagementAdaptor.startListening();
+        recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(homeFoodManagementAdaptor);
     }
 //***********************************************************************************************************************
