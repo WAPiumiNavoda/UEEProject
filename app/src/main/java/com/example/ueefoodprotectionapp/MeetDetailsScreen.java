@@ -2,9 +2,11 @@ package com.example.ueefoodprotectionapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +22,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.HashMap;
+
 public class MeetDetailsScreen extends AppCompatActivity {
 
     DoMeeting doMeeting = new DoMeeting();
@@ -30,16 +34,47 @@ public class MeetDetailsScreen extends AppCompatActivity {
     AppCompatButton rescheduleButton;
     AppCompatButton cancelButton;
 
-    public void markMeetingAsCompleted() {
+    String documentID;
 
+    public void markMeetingAsCompleted(String documentId) {
+        HashMap<String, Object> socialDogMap = new HashMap<String, Object>();
+        socialDogMap.put("meetCompleted", true);
+
+        doMeeting.getDatabaseReference().child(documentID).updateChildren(socialDogMap).addOnSuccessListener(res -> {
+            showSuccessAlert(documentId);
+
+        }).addOnFailureListener(e -> {
+            Log.e("Dog updated error", e.getMessage());
+        });
+
+    }
+
+
+
+    private void showSuccessAlert(String documentID) {
+        AlertDialog alertDialog = new AlertDialog.Builder(MeetDetailsScreen.this, R.style.SocialDogAlertTheme).create();
+        alertDialog.setTitle("Meeting was marked as completed");
+        alertDialog.setMessage("Your meeting was marked as completed successfully!");
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Okay",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(getApplicationContext(), RateMeetingScreen.class);
+                        intent.putExtra("documentID", documentID);
+                        startActivity(intent);
+                    }
+                });
+
+        alertDialog.show();
     }
 
     public void reschedule() {
-
+//        Intent intent = new Intent(getApplicationContext(), Re.class);
+//        startActivity(intent);
     }
 
     public void cancel() {
-
+        Intent intent = new Intent(getApplicationContext(), NavigationPage.class);
+        startActivity(intent);
     }
 
     @Override
@@ -55,9 +90,10 @@ public class MeetDetailsScreen extends AppCompatActivity {
         completeMeetingButton = findViewById(R.id.completeButton);
         rescheduleButton = findViewById(R.id.reschedule_button);
         cancelButton = findViewById(R.id.cancel_button);
+        doMeeting = new DoMeeting();
 
         Intent intent = getIntent();
-        int meetingId =  intent.getIntExtra("dogId", 0);
+        String meetingId =  intent.getStringExtra("meetingId");
 
         doMeeting.getDatabaseReference().addValueEventListener(new ValueEventListener() {
             @Override
@@ -67,8 +103,9 @@ public class MeetDetailsScreen extends AppCompatActivity {
                     for(DataSnapshot child: snapshot.getChildren()){
                         Meeting meeting = child.getValue(Meeting.class);
 
-                        if(meeting.getMeetingId() == meetingId){
-                         meetingHeadline.setText(meeting.getMeeingDescription());
+                        if(meeting.getMeetingId() == Double.parseDouble(meetingId)){
+                            documentID = child.getKey();
+                         meetingHeadline.setText(meeting.getTitle());
                          meetingDescription.setText(meeting.getMeeingDescription());
                          meetingVenue.setText(meeting.getVenue());
                         }
@@ -88,7 +125,7 @@ public class MeetDetailsScreen extends AppCompatActivity {
         completeMeetingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                markMeetingAsCompleted();
+                markMeetingAsCompleted(documentID);
             }
         });
 
