@@ -60,7 +60,6 @@ public class YourMeetups extends AppCompatActivity {
 
                         for(DataSnapshot child: snapshot.getChildren()){
                             Meeting meeting = child.getValue(Meeting.class);
-
                             meetings.add(meeting);
                         }
 

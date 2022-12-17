@@ -2,6 +2,7 @@ package com.example.ueefoodprotectionapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,7 @@ public class MeetupListAdapater extends RecyclerView
     public void navigateToEditDetailsPage(String id) {
         Intent intent = new Intent(ct,MeetDetailsScreen.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        Log.i("Meeting ID", id);
         intent.putExtra("meetingId", id);
         ct.startActivity(intent);
     }
