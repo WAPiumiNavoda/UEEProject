@@ -32,7 +32,7 @@ public class NavigationPage extends AppCompatActivity {
     }
 
     public void onPlaceScreenClick () {
-        Intent intent = new Intent(this, PlaceMeeting.class);
+        Intent intent = new Intent(this, CommunityHomepage.class);
         startActivity(intent);
     }
 
